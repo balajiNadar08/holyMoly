@@ -1,0 +1,164 @@
+{
+  "quotes": [
+    {
+      "id": "q001",
+      "text": "You have the right to perform your duty, but not to the fruits of your actions.",
+      "source": { "type": "gita", "name": "Bhagavad Gita", "chapter": 2, "verse": 47 },
+      "tags": ["karma", "duty"],
+      "language": "en",
+      "metrics": { "likes": 0, "dislikes": 0 }
+    },
+    {
+      "id": "q002",
+      "text": "Whenever there is a decline in righteousness, I manifest myself.",
+      "source": { "type": "gita", "name": "Bhagavad Gita", "chapter": 4, "verse": 7 },
+      "tags": ["dharma"],
+      "language": "en",
+      "metrics": { "likes": 0, "dislikes": 0 }
+    },
+    {
+      "id": "q003",
+      "text": "I can do all things through Christ who strengthens me.",
+      "source": { "type": "bible", "name": "Bible", "chapter": 4, "verse": 13 },
+      "tags": ["faith", "strength"],
+      "language": "en",
+      "metrics": { "likes": 0, "dislikes": 0 }
+    },
+    {
+      "id": "q004",
+      "text": "The Lord is my shepherd; I shall not want.",
+      "source": { "type": "bible", "name": "Bible", "chapter": 23, "verse": 1 },
+      "tags": ["faith", "trust"],
+      "language": "en",
+      "metrics": { "likes": 0, "dislikes": 0 }
+    },
+    {
+      "id": "q005",
+      "text": "Arise, awake, and stop not till the goal is reached.",
+      "source": { "type": "leader", "name": "Swami Vivekananda", "chapter": null, "verse": null },
+      "tags": ["motivation", "goal"],
+      "language": "en",
+      "metrics": { "likes": 0, "dislikes": 0 }
+    },
+    {
+      "id": "q006",
+      "text": "Be the change that you wish to see in the world.",
+      "source": { "type": "leader", "name": "Mahatma Gandhi", "chapter": null, "verse": null },
+      "tags": ["change"],
+      "language": "en",
+      "metrics": { "likes": 0, "dislikes": 0 }
+    },
+    {
+      "id": "q007",
+      "text": "In the middle of every difficulty lies opportunity.",
+      "source": { "type": "scientist", "name": "Albert Einstein", "chapter": null, "verse": null },
+      "tags": ["opportunity"],
+      "language": "en",
+      "metrics": { "likes": 0, "dislikes": 0 }
+    },
+    {
+      "id": "q008",
+      "text": "The only thing we have to fear is fear itself.",
+      "source": { "type": "leader", "name": "Franklin D. Roosevelt", "chapter": null, "verse": null },
+      "tags": ["courage"],
+      "language": "en",
+      "metrics": { "likes": 0, "dislikes": 0 }
+    },
+    {
+      "id": "q009",
+      "text": "Success is not final, failure is not fatal: it is the courage to continue that counts.",
+      "source": { "type": "leader", "name": "Winston Churchill", "chapter": null, "verse": null },
+      "tags": ["success", "courage"],
+      "language": "en",
+      "metrics": { "likes": 0, "dislikes": 0 }
+    },
+    {
+      "id": "q010",
+      "text": "Do what you can, with what you have, where you are.",
+      "source": { "type": "leader", "name": "Theodore Roosevelt", "chapter": null, "verse": null },
+      "tags": ["action"],
+      "language": "en",
+      "metrics": { "likes": 0, "dislikes": 0 }
+    },
+    {
+      "id": "q011",
+      "text": "Happiness depends upon ourselves.",
+      "source": { "type": "philosopher", "name": "Aristotle", "chapter": null, "verse": null },
+      "tags": ["happiness"],
+      "language": "en",
+      "metrics": { "likes": 0, "dislikes": 0 }
+    },
+    {
+      "id": "q012",
+      "text": "The unexamined life is not worth living.",
+      "source": { "type": "philosopher", "name": "Socrates", "chapter": null, "verse": null },
+      "tags": ["life"],
+      "language": "en",
+      "metrics": { "likes": 0, "dislikes": 0 }
+    },
+    {
+      "id": "q013",
+      "text": "It always seems impossible until it’s done.",
+      "source": { "type": "leader", "name": "Nelson Mandela", "chapter": null, "verse": null },
+      "tags": ["perseverance"],
+      "language": "en",
+      "metrics": { "likes": 0, "dislikes": 0 }
+    },
+    {
+      "id": "q014",
+      "text": "Dream, dream, dream. Dreams transform into thoughts and thoughts result in action.",
+      "source": { "type": "leader", "name": "A. P. J. Abdul Kalam", "chapter": null, "verse": null },
+      "tags": ["dreams"],
+      "language": "en",
+      "metrics": { "likes": 0, "dislikes": 0 }
+    },
+    {
+      "id": "q015",
+      "text": "An eye for an eye will only make the whole world blind.",
+      "source": { "type": "leader", "name": "Mahatma Gandhi", "chapter": null, "verse": null },
+      "tags": ["peace"],
+      "language": "en",
+      "metrics": { "likes": 0, "dislikes": 0 }
+    },
+    {
+      "id": "q016",
+      "text": "If you judge people, you have no time to love them.",
+      "source": { "type": "leader", "name": "Mother Teresa", "chapter": null, "verse": null },
+      "tags": ["love"],
+      "language": "en",
+      "metrics": { "likes": 0, "dislikes": 0 }
+    },
+    {
+      "id": "q017",
+      "text": "The best way to predict the future is to create it.",
+      "source": { "type": "leader", "name": "Peter Drucker", "chapter": null, "verse": null },
+      "tags": ["future"],
+      "language": "en",
+      "metrics": { "likes": 0, "dislikes": 0 }
+    },
+    {
+      "id": "q018",
+      "text": "Turn your wounds into wisdom.",
+      "source": { "type": "celebrity", "name": "Oprah Winfrey", "chapter": null, "verse": null },
+      "tags": ["growth"],
+      "language": "en",
+      "metrics": { "likes": 0, "dislikes": 0 }
+    },
+    {
+      "id": "q019",
+      "text": "Act as if what you do makes a difference. It does.",
+      "source": { "type": "philosopher", "name": "William James", "chapter": null, "verse": null },
+      "tags": ["impact"],
+      "language": "en",
+      "metrics": { "likes": 0, "dislikes": 0 }
+    },
+    {
+      "id": "q020",
+      "text": "The journey of a thousand miles begins with one step.",
+      "source": { "type": "philosopher", "name": "Lao Tzu", "chapter": null, "verse": null },
+      "tags": ["journey"],
+      "language": "en",
+      "metrics": { "likes": 0, "dislikes": 0 }
+    }
+  ]
+}
