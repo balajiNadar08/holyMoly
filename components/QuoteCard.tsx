@@ -1,14 +1,14 @@
-import { Text, View } from "react-native";
 import {
+  Boxes,
+  Earth,
+  Funnel,
   Heart,
   Plus,
-  UserRound,
-  Funnel,
-  Boxes,
   Share,
-  Earth,
+  UserRound
 } from "lucide-react-native";
-import { LinearGradient } from "expo-linear-gradient";
+import { Text, View } from "react-native";
+import { VideoView, useVideoPlayer } from "expo-video";
 
 type Quote = {
   id: string;
@@ -31,26 +31,39 @@ type QuoteCardProps = {
 };
 
 export default function QuoteCard({ quote }: QuoteCardProps) {
+  const player = useVideoPlayer(
+    require("../assets/videos/vid1.mp4"),
+    (player) => {
+      player.loop = true;
+      player.muted = true;
+      player.play();
+    },
+  );
+
   return (
-    <LinearGradient
-      colors={["#F2EAE0", "#B4D3D9", "#BDA6CE"] }
-      start={{ x: 0, y: 0 }}
-      end={{ x: 0, y: 1 }}
-      className="flex-1"
-    >
-      <View className="relative flex-1">
+    <View className="flex-1">
+      <VideoView
+  player={player}
+  style={{
+    position: "absolute",
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+  }}
+  contentFit="cover"
+/>
+
+      <View className="flex-1 bg-black/40">
         <View className="absolute top-6 left-0 right-0 flex-row justify-between px-6">
-          <View className="p-2 rounded-xl bg-[#003e6a]">
-            <UserRound color="white" size={26} />
-          </View>
-          <View className="p-2 rounded-xl bg-[#003e6a]">
-            <Funnel color="white" size={26} />
-          </View>
+          <UserRound color="white" size={26} strokeWidth={1.5} />
+          <Funnel color="white" size={26} strokeWidth={1.5} />
         </View>
+
         <View className="flex-1 justify-center items-center px-12">
           <Text
             style={{ fontFamily: "Inter_400Light" }}
-            className="text-[#001a2c] font-semibold text-center text-2xl leading-relaxed tracking-wide"
+            className="text-white font-semibold text-center text-2xl leading-relaxed tracking-wide"
           >
             {quote.text}
           </Text>
@@ -60,15 +73,16 @@ export default function QuoteCard({ quote }: QuoteCardProps) {
             <View className="mt-8 items-center">
               <Text
                 style={{ fontFamily: "Inter_300Light" }}
-                className="text-[#001a2c] font-bold text-md"
+                className="text-white font-bold text-md"
               >
-                {quote.source?.type?.toUpperCase() || "UNKNOWN"}{" "}
+                {quote.source?.type?.toUpperCase()}{" "}
                 {quote.source?.chapter != null && quote.source?.verse != null
                   ? `${quote.source.chapter}.${quote.source.verse}`
                   : ""}
               </Text>
             </View>
           )}
+
           {quote.source?.name !== "Bhagavad Gita" &&
             quote.source?.name !== "Bible" && (
               <View className="mt-8 items-center">
@@ -80,25 +94,21 @@ export default function QuoteCard({ quote }: QuoteCardProps) {
                 </Text>
               </View>
             )}
+
           <View className="flex-row gap-6 mt-12">
-            <Heart color="#001a2c" size={32} />
-            <Plus color="#001a2c" size={32} />
+            <Heart color="white" size={32} />
+            <Plus color="white" size={32} />
           </View>
         </View>
+
         <View className="absolute bottom-20 left-0 right-0 flex-row justify-between items-end px-6">
-          <View className="p-2 rounded-xl bg-[#003e6a]">
-            <Boxes color="white" size={26} />
-          </View>
+          <Boxes color="white" size={26} strokeWidth={1.5} />
           <View className="gap-6">
-            <View className="p-2 rounded-xl bg-[#003e6a]">
-              <Earth color="white" size={26} />
-            </View>
-            <View className="p-2 rounded-xl bg-[#003e6a]">
-              <Share color="white" size={26} />
-            </View>
+            <Earth color="white" size={26} strokeWidth={1.5} />
+            <Share color="white" size={26} strokeWidth={1.5} />
           </View>
         </View>
       </View>
-    </LinearGradient>
+    </View>
   );
 }
