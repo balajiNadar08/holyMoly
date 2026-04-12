@@ -1,13 +1,25 @@
-import { View, Text, TouchableOpacity, FlatList } from "react-native";
+import {
+  View,
+  Text,
+  TouchableOpacity,
+  FlatList,
+  TextInput,
+  Modal,
+} from "react-native";
 import { useState } from "react";
 import { Plus } from "lucide-react-native";
 
 const Collection = () => {
   const [collections, setCollections] = useState<string[]>([]);
+  const [modalVisible, setModalVisible] = useState(false);
+  const [newName, setNewName] = useState("");
 
   const createCollection = () => {
-    const newCollection = `Collection ${collections.length + 1}`;
-    setCollections((prev) => [...prev, newCollection]);
+    if (!newName.trim()) return;
+
+    setCollections((prev) => [...prev, newName.trim()]);
+    setNewName("");
+    setModalVisible(false);
   };
 
   return (
@@ -18,32 +30,67 @@ const Collection = () => {
 
       {collections.length === 0 ? (
         <View className="flex-1 items-center justify-center">
-          <Text className="text-black text-base text-center">
-            Your jar seems to be empty. Create collections:)
+          <Text className="text-black text-base text-center opacity-60">
+            Your jar seems empty.
+          </Text>
+          <Text className="text-black text-sm text-center opacity-40 mt-1">
+            Start by creating your first collection
           </Text>
         </View>
       ) : (
         <FlatList
           data={collections}
           keyExtractor={(item, index) => index.toString()}
-          contentContainerStyle={{ paddingBottom: 100 }}
+          numColumns={2}
+          columnWrapperStyle={{ justifyContent: "space-between" }}
+          contentContainerStyle={{ paddingBottom: 120 }}
           renderItem={({ item }) => (
-            <View className="border border-black rounded-2xl p-4 mb-4">
-              <Text className="text-black text-lg">{item}</Text>
+            <View className="w-[48%] border border-black rounded-2xl p-4 mb-4">
+              <Text className="text-black text-base font-medium">
+                {item}
+              </Text>
             </View>
           )}
         />
       )}
 
       <TouchableOpacity
-        onPress={createCollection}
-        className="absolute bottom-10 left-6 right-6 bg-white border-2 py-4 rounded-2xl items-center"
+        onPress={() => setModalVisible(true)}
+        className="absolute bottom-10 left-6 right-6 bg-black py-4 rounded-2xl items-center flex-row justify-center"
       >
-        <View className="text-black text-lg font-medium text-center flex-row justify-center items-center">
-          <Plus color="black" size={20} />{" "}
-          <Text className="pl-2">Create Collection</Text>
-        </View>
+        <Plus color="white" size={20} />
+        <Text className="text-white text-base font-medium ml-2">
+          Create Collection
+        </Text>
       </TouchableOpacity>
+
+      <Modal visible={modalVisible} transparent animationType="fade">
+        <View className="flex-1 bg-black/40 justify-center px-6">
+          <View className="bg-white rounded-2xl p-6">
+            <Text className="text-black text-lg font-semibold mb-4">
+              New Collection
+            </Text>
+
+            <TextInput
+              placeholder="Enter collection name"
+              value={newName}
+              onChangeText={setNewName}
+              className="border border-black rounded-xl px-4 py-3 text-black mb-4"
+              placeholderTextColor="#666"
+            />
+
+            <View className="flex-row justify-end gap-3">
+              <TouchableOpacity onPress={() => setModalVisible(false)}>
+                <Text className="text-black opacity-60">Cancel</Text>
+              </TouchableOpacity>
+
+              <TouchableOpacity onPress={createCollection}>
+                <Text className="text-black font-semibold">Create</Text>
+              </TouchableOpacity>
+            </View>
+          </View>
+        </View>
+      </Modal>
     </View>
   );
 };
