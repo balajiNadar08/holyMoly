@@ -1,6 +1,20 @@
 import { View, Text, TouchableOpacity, Modal } from "react-native";
 
-const GENRES = ["Gita", "Bible", "Romance", "Motivation", "Spiritual", "Life"];
+const GENRES = [
+  "Gita",
+  "Bible",
+  "Romance",
+  "Motivation",
+  "Spiritual",
+  "Life",
+  "Heart-break",
+  "Historic",
+  "Philosophical",
+  "Political",
+  "Scientific",
+  "Business",
+  "Humor"
+];
 
 type Props = {
   visible: boolean;
