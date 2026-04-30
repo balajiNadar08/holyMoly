@@ -97,7 +97,9 @@ export default function QuoteCard({ quote, onOpenFilter }: QuoteCardProps) {
           </Link>
 
           <View className="gap-6">
-            <Earth color="white" size={26} strokeWidth={1.5} />
+            <Link href="/community">
+              <Earth color="white" size={26} strokeWidth={1.5} />
+            </Link>
             <Share color="white" size={26} strokeWidth={1.5} />
           </View>
         </View>
