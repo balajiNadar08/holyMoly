@@ -7,6 +7,8 @@ import {
   Modal,
   TextInput,
 } from "react-native";
+import { Settings } from "lucide-react-native";
+import { Link } from "expo-router";
 import { useState } from "react";
 
 type Profile = {
@@ -74,7 +76,14 @@ const Profile = () => {
         className="flex-1 bg-[#05071A]"
         showsVerticalScrollIndicator={false}
       >
-        <View className="px-6 pt-14 pb-10">
+        <View className="px-6 pt-6 pb-10">
+
+          <View className="flex-1 items-end">
+            <Link href={"/settings"}>
+              <Settings color="white" size={26} strokeWidth={1.5} />
+            </Link>
+          </View>
+
           <View className="items-center">
             <Image
               source={require("../assets/images/profile-pic/pfp-1.webp")}
