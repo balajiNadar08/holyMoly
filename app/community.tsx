@@ -47,7 +47,7 @@ const starterPosts: Post[] = [
     text: "You don't need more time. You need less distraction.",
     votes: 89,
     userVote: null,
-    createdAt: Date.now() - 2000
+    createdAt: Date.now() - 2000,
   },
 
   {
@@ -185,14 +185,16 @@ const Community = () => {
           showsVerticalScrollIndicator={false}
           contentContainerStyle={{
             paddingHorizontal: 24,
-            paddingBottom: 160
+            paddingBottom: 160,
           }}
           renderItem={({ item }) => (
             <View className="bg-white border border-zinc-800 rounded-md p-4 mb-4">
               <Text className="text-black text-[14px] leading-5 ">
                 {item.text}
               </Text>
-              <Text className="text-zinc-600 text-[12px] text-right italic">- {item.username}</Text>
+              <Text className="text-zinc-600 text-[12px] text-right italic">
+                - {item.username}
+              </Text>
 
               <View className="flex-row justify-center items-center mt-4 border border-zinc-300 self-start rounded-xl p-1">
                 <TouchableOpacity
